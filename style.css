@@ -1,0 +1,26 @@
+body {
+  background-image: url(https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.realmofhistory.com%2Fwp-content%2Fuploads%2F2016%2F07%2F12-facts-ancient-roman-gladiators_7.jpg&f=1);
+text-align: center}
+
+heading {
+  font-size: 30px;
+  text-align: center;
+}
+
+.boxed {
+  border: 1px solid gold;
+  background: white;
+top: 50%;
+left: 50%;
+margin-left: -150px;
+margin-top: 00px;
+
+  position: relative;
+	width: 300px;
+	height: 150px;
+}
+
+p {
+  text-align: center;
+}
+
