@@ -1,37 +1,4 @@
 <style>
-  function convertToRoman() {
-    let num = document.getElementById("dec").value;
-    let total = "";
-    let arrNum = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
-    let arrRom = ["M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"]
-
-    function remFinder(input, figure) {
-        return parseInt(input % figure)
-    }
-
-    function tally(count) {
-        let roman = ""
-        let i = 0;
-        while (i < count) {
-            roman += arrRom[j];
-            i++
-        }
-    return roman
-    }
-
-    let remainder = num;
-
-    for (var j=0; j < arrNum.length; j++) {
-        total = total + tally(parseInt(remainder / arrNum[j]))
-        remainder = remFinder(remainder, arrNum[j])
-    }
-
-    console.log(total);
-    
-  document.getElementById("output").innerHTML = total;
-  }
-</style>
-<style>
   body {
   background-image: url(https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.realmofhistory.com%2Fwp-content%2Fuploads%2F2016%2F07%2F12-facts-ancient-roman-gladiators_7.jpg&f=1);
 text-align: center}
@@ -73,3 +40,37 @@ Please enter the number you'd like to convert: <input type="text" id="dec">
 <p id="output">...</p>
  </div>
 </body>
+
+<script>
+  function convertToRoman() {
+    let num = document.getElementById("dec").value;
+    let total = "";
+    let arrNum = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
+    let arrRom = ["M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"]
+
+    function remFinder(input, figure) {
+        return parseInt(input % figure)
+    }
+
+    function tally(count) {
+        let roman = ""
+        let i = 0;
+        while (i < count) {
+            roman += arrRom[j];
+            i++
+        }
+    return roman
+    }
+
+    let remainder = num;
+
+    for (var j=0; j < arrNum.length; j++) {
+        total = total + tally(parseInt(remainder / arrNum[j]))
+        remainder = remFinder(remainder, arrNum[j])
+    }
+
+    console.log(total);
+    
+  document.getElementById("output").innerHTML = total;
+  }
+</script>
